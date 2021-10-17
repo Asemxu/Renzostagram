@@ -3,19 +3,19 @@
     let stories = [
         {
             "id":1,
-            "img":"https://media.istockphoto.com/photos/cyber-technology-security-protection-monitoring-concept-advanced-picture-id1276687348?b=1&k=20&m=1276687348&s=170667a&w=0&h=AsdVHebhkhMDszRM10Ppy7BlguYjt2RJ5pT3oxnRYN4=",
+            "img":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Primera historia",
             "date":"08/10/2021 08:00:00",
         },
         {
             "id":2,
-            "img":"https://media.istockphoto.com/photos/cyber-technology-security-protection-monitoring-concept-advanced-picture-id1276687348?b=1&k=20&m=1276687348&s=170667a&w=0&h=AsdVHebhkhMDszRM10Ppy7BlguYjt2RJ5pT3oxnRYN4=",
+            "img":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Segunda historia",
             "date":"08/10/2021 09:00:00"
         },
         {
             "id":3,
-            "img":"https://media.istockphoto.com/photos/cyber-technology-security-protection-monitoring-concept-advanced-picture-id1276687348?b=1&k=20&m=1276687348&s=170667a&w=0&h=AsdVHebhkhMDszRM10Ppy7BlguYjt2RJ5pT3oxnRYN4=",
+            "img":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Tercera historia",
             "date":"08/10/2021 010:00:00"
         }
