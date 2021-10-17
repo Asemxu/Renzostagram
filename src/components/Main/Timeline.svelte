@@ -95,7 +95,7 @@
         let commentsUser= postUser.comentarios.filter(item => item.id !== idComment);
         items[postUserIndex].comentarios = commentsUser;
         isLoading = false;
-    }
+g    }
 
 </script>
 <style>
