@@ -1,18 +1,17 @@
 <script>
     import Header from '../components/Layout/Header.svelte'
     import Main from '../Pages/Main.svelte'
-
+    import '../Fonts/fonts.css';
 </script>
 
 <style>
     :global(body){
         background-color:#fafafa;
         color:rgba(38,38,38,0.7);
-        font-family:"Lato",sans-serif;
         margin:0;
         padding:0;
     }
-
+    
     :global(h1,h2,h3){
         margin:0;
         padding:0;
@@ -54,6 +53,7 @@
         pointer-events: none;
         opacity:0.35
     }
+
 </style>
 
 <Header/>

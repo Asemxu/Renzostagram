@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../c336dcb109479897d83a.ttf) format("ttf");
+
+}
+/* cyrillic-ext */
+
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.pacifico {
+    font-family: "Pacifico", sans-serif;
+  }
+  
+
+
+/*# sourceMappingURL=main.93b93a7b03e23569eb1c.css.map*/

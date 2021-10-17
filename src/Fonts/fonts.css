@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./Lato-Light.ttf) format("ttf");
+
+}
+/* cyrillic-ext */
+
+
+.lato {
+  font-family: "Lato", sans-serif;
+}
+
+.pacifico {
+    font-family: "Pacifico", sans-serif;
+  }
+  

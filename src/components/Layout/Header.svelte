@@ -39,7 +39,6 @@
         margin: 0;
         font-size: 28px;
         color: black;
-        font-family: "Pacifico", cursive;
         cursor: pointer;
         position: relative;
         background: #fff;
@@ -67,7 +66,7 @@
     <div class="header_container">
         <div class="header_content">
             <div class="header_logo">
-                <h1>Renzostagram</h1>
+                <h1 class="pacifico">Renzostagram</h1>
             </div>
             <div class="header_nav">
                 <ul class="list_unstyled">
