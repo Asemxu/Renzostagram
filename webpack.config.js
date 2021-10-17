@@ -68,7 +68,7 @@ module.exports ={
                         limit:10000,
                         mimetype:"font/ttf",
                         name:"[name].[contenthash].[ext]",
-                        outputPath:"./fonts/",
+                        outputPath:"./Fonts/",
                         publicPath:"./Fonts",
                         esModule:false 
                     }
