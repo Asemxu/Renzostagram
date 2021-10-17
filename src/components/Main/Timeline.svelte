@@ -5,7 +5,7 @@
     let items = [
         {
             "id":1,
-            "image":"https://arepa.s3.amazonaws.com/elmo002.jpg",
+            "image":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Este es un post genial",
             "username":"nataly",
             "ubicacion":"Cajamarca, Perú",
@@ -24,7 +24,7 @@
         },
         {
             "id":2,
-            "image":"https://arepa.s3.amazonaws.com/elmo002.jpg",
+            "image":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Este es un post genial",
             "username":"nataly",
             "ubicacion":"Cajamarca, Perú",
@@ -38,7 +38,7 @@
         },
         {
             "id":3,
-            "image":"https://arepa.s3.amazonaws.com/elmo002.jpg",
+            "image":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Este es un post genial",
             "username":"nataly",
             "ubicacion":"Cajamarca, Perú",
@@ -52,7 +52,7 @@
         },
         {
             "id":4,
-            "image":"https://arepa.s3.amazonaws.com/elmo002.jpg",
+            "image":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Este es un post genial",
             "username":"nataly",
             "ubicacion":"Cajamarca, Perú",
@@ -66,7 +66,7 @@
         },
         {
             "id":5,
-            "image":"https://arepa.s3.amazonaws.com/elmo002.jpg",
+            "image":"https://www.gstatic.com/webp/gallery/1.webp",
             "description":"Este es un post genial",
             "username":"nataly",
             "ubicacion":"Cajamarca, Perú",
