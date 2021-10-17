@@ -1,0 +1,16 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../src/Fonts/pacifico.woff2') format('woff2');
+  }
+  .lato {
+    font-family: Lato,'Lato', sans-serif;
+  }
+  
+  .pacifico {
+      font-family: Pacifico,'Pacifico', sans-serif;
+    }
+    
+  

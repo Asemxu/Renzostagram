@@ -18,16 +18,7 @@ module.exports ={
             '*',
             '.mjs',
             '.js',
-            '.svelte',
-            '.css',
-            '.svg',
-            '.jpg',
-            '.jpeg',
-            '.png',
-            '.gif',
-            '.jpg',
-            '.gif',
-            '.ttf',
+            '.svelte'
         ]
     },
     module:{
@@ -61,15 +52,14 @@ module.exports ={
                 ]
             },
             {
-                test:/\.(ttf)$/,
+                test:/\.(woff|woff2)$/,
                 use:{
                     loader:'url-loader',
                     options:{
-                        limit:10000,
-                        mimetype:"font/ttf",
-                        name:"[name].[contenthash].[ext]",
+                        mimetype:"application/font-woff",
+                        name:"[name]",
                         outputPath:"./Fonts/",
-                        publicPath:"./Fonts",
+                        publicPath:"./Fonts/",
                         esModule:false 
                     }
                 }

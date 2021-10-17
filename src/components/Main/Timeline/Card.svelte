@@ -133,7 +133,7 @@
     <div class="card_container">
         <div class="card_header">
             <div class="card_user">
-                <img src={item.image} alt={item.description} />
+                <img src={item.image} width height alt={item.description} />
                 <h2>
                     {item.username}
                     <span>{item.ubicacion}</span>

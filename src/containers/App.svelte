@@ -1,9 +1,7 @@
 <script>
     import Header from '../components/Layout/Header.svelte'
     import Main from '../Pages/Main.svelte'
-    import '../styles/fonts.css';
 </script>
-
 <style>
     :global(body){
         background-color:#fafafa;
