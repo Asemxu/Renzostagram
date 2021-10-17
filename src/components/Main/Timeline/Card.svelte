@@ -145,7 +145,7 @@
         </div>
         <div class="card_photo">
             <figure>
-                <img src={item.image} alt={item.description} />
+                <img src={item.image}  width height alt={item.description} />
             </figure>
         </div>
         <div class="card_icons">
