@@ -30,7 +30,7 @@
         <div class="profile_avatar">
             <img src={$user.avatar} alt="avatar" class="avatar">
         </div>
-        <div class="profile_info">
+        <div class="profile_info lato">
             <h2>{$user.username}</h2>
             <span>{$user.nombres} {$user.apellidos} </span>
         </div>

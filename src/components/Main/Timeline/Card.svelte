@@ -134,7 +134,7 @@
         <div class="card_header">
             <div class="card_user">
                 <img src={item.image} width="100%" height="100%" alt={item.description} />
-                <h2>
+                <h2  class="lato">
                     {item.username}
                     <span>{item.ubicacion}</span>
                 </h2>
@@ -157,7 +157,7 @@
                 <img on:click={()=>{ isBook = !isBook }} src={!isBook ? book : book_mark} class="icon" alt="fontawesome" />
             </div>
         </div>
-        <div class="card_description">
+        <div class="card_description lato">
             <h3>{item.username}</h3>
             <span>{item.description}</span>
         </div>

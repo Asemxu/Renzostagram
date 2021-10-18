@@ -40,5 +40,5 @@
     <div class="storie_item_box">
         <img src={storie.img} alt={storie.desription}/>
     </div>
-    <h2>{$user.username} <span>{storie.date}</span></h2>
+    <h2  class="lato">{$user.username} <span>{storie.date}</span></h2>
 </div>

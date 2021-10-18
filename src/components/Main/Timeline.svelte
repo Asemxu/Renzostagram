@@ -79,8 +79,9 @@
             ]
         }
     ]
-    const handleAddComment = (comentario,idPost) => {
+    const handleAddComment = (inputComment,comentario,idPost) => {
         isLoading = true;
+        inputComment.value = "";
         let postUser = items.find(item => item.id === idPost);
         let postUserIndex = items.findIndex(item => item.id === idPost);
         let newComment = {"id" : postUser.comentarios.length + 1 , "comentario" : comentario ,"username" : $user.username  , "isNew": true }

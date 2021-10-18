@@ -53,8 +53,8 @@
 <div class="stories">
     <div class="stories_container">
         <div class="stories_head">
-            <h2>Historias </h2>
-            <span>Ver todas </span>
+            <h2 class="lato">Historias </h2>
+            <span  class="lato">Ver todas </span>
         </div>
         <div class="stories_items">
             {#each stories as storie }

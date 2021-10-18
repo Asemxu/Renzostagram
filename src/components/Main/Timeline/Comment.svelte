@@ -28,7 +28,7 @@
   }
 </style>
 <div class="comment">
-  <div class="comment_info">
+  <div class="comment_info lato">
     <h3>{comentario.username}</h3>
     <span>{comentario.comentario}</span>
   </div>

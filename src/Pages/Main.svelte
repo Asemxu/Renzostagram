@@ -1,6 +1,7 @@
 <script>
     import Timeline from '../components/Main/Timeline.svelte';
     import Sidebar from '../components/Main/Sidebar.svelte';
+    
 </script>
 <style>
     .main {
@@ -23,10 +24,10 @@
         }
     }
 </style>
+
 <div class="main">
     <div class="main_container">
         <Timeline/>
         <Sidebar />
-
     </div>
 </div>

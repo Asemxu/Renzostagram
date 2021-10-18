@@ -1,6 +1,8 @@
 <script>
     import Header from '../components/Layout/Header.svelte'
-    import Main from '../Pages/Main.svelte'
+    import Loadable from './Loadable.svelte'
+    import Loader from '../components/Layout/Loader.svelte';
+  
 </script>
 <style>
     :global(body){
@@ -51,8 +53,17 @@
         pointer-events: none;
         opacity:0.35
     }
-
+    :global(.lato){
+        font-family: Lato , sans-serif;
+        font-weight: 600;
+    }
+	:global(.pacifico){
+        font-family: Pacifico , sans-serif;
+    }
 </style>
-
 <Header/>
-<Main />
+<h1>This one will not</h1>
+<Loadable loader={() => import('../Pages/Main.svelte')} delay="300">
+    <Loader />
+</Loadable>
+  
