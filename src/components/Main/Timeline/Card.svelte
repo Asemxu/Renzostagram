@@ -1,13 +1,16 @@
 <script>
     import Comments from './Comments.svelte';                   
     import { settings , heart_like , heart , book , book_mark, share } from '../../../Images/assets';
-    import Loader from '../../../components/Layout/Loader.svelte'
+    import Loader from '../../Layout/Loader.svelte'
     import { user } from '../../../store/store';
+    import Lazy from 'svelte-lazy';
+
     export let item;
     export let handleAddComment;
     export let handleDeleteComment;
     export let isLoading;
     export let title = "Cargando ......"
+
     let isLiked = false;
     let isBook = false;
     let idComment = item.id;
@@ -60,6 +63,7 @@
       font-weight: normal;
       color: rgba(38, 38, 38, 0.7);
     }
+   
     .card_photo {
       padding: 0;
       margin: 0;
@@ -69,7 +73,6 @@
       height: auto;
     }
     .card_photo figure {
-      margin: 0;
       padding: 0;
       cursor: pointer;
     }
@@ -133,7 +136,12 @@
     <div class="card_container">
         <div class="card_header">
             <div class="card_user">
-                <img src={item.image} width="100%" height="100%" alt={item.description} />
+                <Lazy height={100} fadeOption={{delay:0,duration:300}} placeholder={"Cargando..."}>
+                  <figure>
+                    <img src={item.image} width="100%" height="100%" alt={item.description} />
+                  </figure>
+                </Lazy>
+               
                 <h2  class="lato">
                     {item.username}
                     <span>{item.ubicacion}</span>
@@ -144,9 +152,11 @@
             </div>
         </div>
         <div class="card_photo">
-            <figure>
-                <img src={item.image}  width="100%" height="100%" alt={item.description} />
-            </figure>
+            <Lazy height={100} fadeOption={{delay:0,duration:300}} placeholder={"Cargando..."}>
+              <figure>
+                <img src={item.image} width="100%" height="100%" alt={item.description} />
+              </figure>
+            </Lazy>
         </div>
         <div class="card_icons">
             <div class="card_icons_first">

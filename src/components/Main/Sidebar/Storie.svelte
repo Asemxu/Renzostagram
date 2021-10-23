@@ -1,6 +1,7 @@
 <script>
     import { user } from '../../../store/store';
     export let storie
+    import Lazy from 'svelte-lazy'
 </script>
 <style>
     .storie_item img {
@@ -35,10 +36,16 @@
       background-origin: border-box;
       background-clip: content-box, border-box;
     }
+    
 </style>
 <div class="storie_item">
     <div class="storie_item_box">
-        <img src={storie.img} alt={storie.desription}/>
+      <Lazy height={100} fadeOption={{delay:0,duration:300}} placeholder={"Cargando..."}>
+        <figure>
+          <img src={storie.img} alt={storie.desription} width="100%" height="100%"/>
+        </figure>
+      </Lazy>
+        
     </div>
     <h2  class="lato">{$user.username} <span>{storie.date}</span></h2>
 </div>

@@ -1,5 +1,7 @@
 <script>
     import { user } from '../../../store/store';
+    import Lazy from 'svelte-lazy';
+
 </script>
 <style>
     .profile_content {
@@ -28,7 +30,11 @@
 <div class="profile">
     <div class="profile_content">
         <div class="profile_avatar">
-            <img src={$user.avatar} alt="avatar" class="avatar">
+          <Lazy height={100} fadeOption={{delay:0,duration:300}} placeholder={"Cargando..."}>
+            <figure>
+              <img src={$user.avatar} alt="avatar" width="100%" height="100%" class="avatar">
+            </figure>
+          </Lazy>
         </div>
         <div class="profile_info lato">
             <h2>{$user.username}</h2>

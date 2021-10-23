@@ -1,8 +1,21 @@
 <script>
-    import Header from '../components/Layout/Header.svelte'
-    import Loadable from './Loadable.svelte'
-    import Loader from '../components/Layout/Loader.svelte';
-  
+
+    let Header;
+    let LoadableContainer;
+    let Loader;
+    
+    import('../components/Layout/Header.svelte').then(module =>{
+        Header  = module.default 
+    })
+    import('../components/Layout/Loader.svelte').then(module =>{
+        Loader  = module.default 
+    })
+    import('./LoadableContainer.svelte').then(module =>{
+        LoadableContainer  = module.default 
+    })
+    import('../components/Layout/Loader.svelte').then(module =>{
+        Loader  = module.default 
+    })
 </script>
 <style>
     :global(body){
@@ -53,17 +66,27 @@
         pointer-events: none;
         opacity:0.35
     }
-    :global(.lato){
-        font-family: Lato , sans-serif;
-        font-weight: 600;
+
+   
+
+    :global(.lato) {
+        font-family: Lato
     }
-	:global(.pacifico){
-        font-family: Pacifico , sans-serif;
+    :global(.pacifico) {
+        font-family: Pacifico
+    }
+
+    :global(figure){
+        margin:0;
     }
 </style>
-<Header/>
-<h1>This one will not</h1>
-<Loadable loader={() => import('../Pages/Main.svelte')} delay="300">
-    <Loader />
-</Loadable>
-  
+{#if Header}
+    <svelte:component this={Header}/>
+{/if}
+
+{#if LoadableContainer}
+    <svelte:component this={LoadableContainer} >
+        <svelte:component this={Loader} />
+    </svelte:component>
+    
+{/if}

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
@@ -47,7 +48,6 @@ module.exports ={
             {
                 test:/\.css|.styl$/i,
                 use:[
-                    MiniCssExractPlugin.loader,
                     'css-loader',
                 ]
             },
@@ -58,7 +58,7 @@ module.exports ={
                     options:{
                         mimetype:"application/font-woff",
                         name:"[name]",
-                        outputPath:"./Fonts/",
+                        outputPath:"./",
                         publicPath:"./Fonts/",
                         esModule:false 
                     }
@@ -77,9 +77,7 @@ module.exports ={
             template:'./public/index.html',
             filename:'./index.html'
         }),
-        new MiniCssExractPlugin({
-            filename:'assets/[name].[contenthash].css'
-        })
+        new CleanWebpackPlugin(),
+        new Dotenv()
     ],
-    devtool: prod ? false : 'source-map',
 }
