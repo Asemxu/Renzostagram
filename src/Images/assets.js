@@ -5,4 +5,6 @@ import book from './book.png';
 import share from './share.png'
 import user_ from './user.png';
 import book_mark from './book_mark.png';
-export { settings , heart_like , heart , book , share , user_ , book_mark }
+import login from './login.png'
+
+export { settings , heart_like , login , heart , book , share , user_ , book_mark }

@@ -4,7 +4,10 @@
     import Loader from '../../Layout/Loader.svelte'
     import { user } from '../../../store/store';
     import Lazy from 'svelte-lazy';
-
+    import Modal from '../../Shared/Modal.svelte';
+    import { get } from 'svelte/store'
+    import { blur } from 'svelte/transition';
+    import Shared from '../../Modals/Share.svelte'
     export let item;
     export let handleAddComment;
     export let handleDeleteComment;
@@ -14,8 +17,15 @@
     let isLiked = false;
     let isBook = false;
     let idComment = item.id;
+    let isModal = false;
+
+    const isClickShared = () =>{
+      isModal = !isModal
+    }
+
     const isClickLiked = () =>{
-        !isLiked ? user.update( n =>{
+      if(Object.keys(get(user)).length > 0){
+         !isLiked ? user.update( n =>{
           n.likes++;
           return n;
         }) : user.update(n =>{
@@ -23,6 +33,7 @@
           return n;
         });
         isLiked = !isLiked;
+      }
     }
     
 </script>
@@ -133,6 +144,13 @@
   
 
 <div class="card">
+    {#if isModal}
+      <div transition:blur>
+          <Modal>
+              <Shared on:click={isClickShared}/>
+          </Modal>
+      </div>
+    {/if}
     <div class="card_container">
         <div class="card_header">
             <div class="card_user">
@@ -161,7 +179,7 @@
         <div class="card_icons">
             <div class="card_icons_first">
                 <img on:click={isClickLiked} src={!isLiked ? heart_like : heart} alt="fontawesome" class="icon" />
-                <img src={share} alt="fontawesome" class="icon" />
+                <img on:click={isClickShared} src={share} alt="fontawesome" class="icon" />
             </div>
             <div class="card_icons_second">
                 <img on:click={()=>{ isBook = !isBook }} src={!isBook ? book : book_mark} class="icon" alt="fontawesome" />

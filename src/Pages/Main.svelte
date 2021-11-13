@@ -1,7 +1,8 @@
 <script>
     import Timeline from '../components/Main/Timeline.svelte';
     import Sidebar from '../components/Main/Sidebar.svelte';
-    
+    import { user } from '../store/store';
+    import { get } from 'svelte/store';
 </script>
 <style>
     .main {
@@ -28,6 +29,8 @@
 <div class="main">
     <div class="main_container">
         <Timeline/>
-        <Sidebar />
+        {#if Object.keys($user).length > 0}
+            <Sidebar />
+        {/if}
     </div>
 </div>

@@ -13,6 +13,7 @@
   "dependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "dotenv-webpack": "^7.0.3",
+    "firebase": "^8.1.2",
     "svelte": "^3.43.1",
     "svelte-lazy": "^1.0.12",
     "svelte-loadable": "^1.1.0"

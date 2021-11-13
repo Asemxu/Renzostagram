@@ -1,6 +1,26 @@
 <script>
-    import { heart , user_ } from '../../Images/assets';
+    import { heart , user_ , login} from '../../Images/assets';
     import { user } from '../../store/store';
+    import { get } from 'svelte/store'
+    import Modal from '../Shared/Modal.svelte';
+    import Login from '../Modals/Login.svelte';
+    import Register from '../Modals/Register.svelte';
+    import { blur } from 'svelte/transition';
+    let isModal = false;
+    let isRegister = false;
+    const isClickModal = () =>{
+      isModal = !isModal
+    }
+    const isClickRegister = () =>{
+        console.log("Entro");
+        isRegister = !isRegister
+    }
+    const isLogin = () =>{
+        user.update( n =>{
+            n.likes = 0;
+            return n;
+        })
+    }
 </script>
 <style>
     .header {
@@ -62,6 +82,19 @@
         margin-left:0.5rem
     }
 </style>
+{#if isModal && !isRegister}
+    <div transition:blur>
+        <Modal>
+            <Login {isLogin} on:click={isClickModal} {isClickRegister}/>
+        </Modal>
+    </div>
+{:else if isModal && isRegister}
+    <div transition:blur>
+        <Modal>
+            <Register on:click={isClickModal}/>
+        </Modal>
+    </div>
+{/if}
 <div class="header">
     <div class="header_container">
         <div class="header_content">
@@ -70,15 +103,24 @@
             </div>
             <div class="header_nav">
                 <ul class="list_unstyled">
-                    <li class="pointer">
-                        <img src={heart} alt="font awesome" class="icon" />
-                        {#if $user.likes > 0}
-                            <span class="count_likes">{$user.likes}</span>
-                        {/if}
-                    </li>
-                    <li class="pointer">
-                        <img src={user_} alt="font awesome" class="icon" />
-                    </li>
+                    
+                    {#if Object.keys($user).length > 0}
+                        <li class="pointer">
+                            <img src={heart} alt="font awesome" class="icon" />
+                            {#if $user.likes > 0}
+                                <span class="count_likes">{$user.likes}</span>
+                            {/if}
+                        </li>
+                       
+                        <li class="pointer" on:click={isClickModal}>
+                            <img src={user_} alt="font awesome" class="icon" />
+                        </li>
+                    {:else}
+                        <li class="pointer" on:click={isClickModal}>
+                            <img src={login} alt="font awesome" class="icon" />
+                        </li>
+                    {/if}
+                    
                 </ul>
             </div>
         </div>

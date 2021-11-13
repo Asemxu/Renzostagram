@@ -1,5 +1,5 @@
 <script>
-    import Loadable from './Loadable.svelte';
+    import Loadable from '../components/Shared/Loadable.svelte';
 
 </script>
 
